@@ -17,7 +17,7 @@
 Quit</a>
 	<div id='batBlog'>
 
-			<img src="bat.bmp" alt="bat" id='bat' onload="command.batSpam('batBlog', 100,1);">
+			<img src="batFly.bmp" alt="bat" id='bat' onload="command.timingForBat('batBlog',20,19);">
 		
 	</div>
 </head>
@@ -36,15 +36,15 @@ Quit</a>
 
 			<img src="smiley.gif" alt="Smiley face" width="0%" height="0%" id='smile'>
 			
-			<input type="button" value="AIM" onclick="random();">
+			<input type="button" value="AIM" id='aim' disabled=true onclick="command.throwAction('aim');"
 	</div>
 
 
-	<br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br>
 	<div id='boyBlog'>
-	#######################
+	###########
 	<img src="boyBack.png" style="float:middle" alt="Boy" width="50" height="50" id='boy' >
-	#######################
+	###########
 		
 	</div>
 	<img src="land.png" alt="Boy" id='boy' >
@@ -57,10 +57,15 @@ Quit</a>
 						<td>
 							Answer<input type="text" size="10" maxlength="10" value="" id="mathAnswer"  />
 							<input type="button" disabled="true" value="THROW" id="throwButton" onclick="
-							matchNumber();" />
+							matchNumber();
+							command.clearTimer();
+							if (time2>=50){
+							command.timing('countdown',1000,50);}
+							
+							" />
 						</td>
 					</tr>
-			
+				<p id='countdown' value='50'></p>
 				</tbody>
 
 	</table>

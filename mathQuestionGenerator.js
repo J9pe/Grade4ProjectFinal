@@ -58,7 +58,7 @@ answeredQuestion=false;
 		//random();
 		if (!right)
 		{
-			command.enlargeValD('smile');
+			command.changeValD('smile',-1);
 			command.moveImageToPlayer('questionBlog',(1));
 
 			answeredQuestion=true;
@@ -67,7 +67,7 @@ answeredQuestion=false;
 		}
 		else if (right==true)
 		{
-			command.delargeValD('smile');
+			command.changeValD('smile',1);
 			command.moveImageToPlayer('questionBlog',(-1));
 
 			right=false;
@@ -79,7 +79,7 @@ answeredQuestion=false;
 		}
 }
 
-function myfun2(a) {
+function randomMathNumber(a) {
 	return Math.floor((Math.random()*a)+1);
 }
 
@@ -95,33 +95,33 @@ if (answeredQuestion==true){
 	answeredQuestion=false;
 		x = Math.floor((Math.random()*(a2-a1))+a1);
 	
-				var myfun = function (a) {
+				var randomMathNumber = function (a) {
 					return Math.floor((Math.random()*a)+1);
 				};
 					f = Math.floor((Math.random()*4)+1);
 				if ( f == 1)
 					{
 						s = "+";
-						y = myfun (100);
+						y = randomMathNumber (100);
 						z = x + y;
 					}
 				else if ( f == 2)
 					{
 						s = "-";
-						y = myfun (50);
+						y = randomMathNumber (50);
 						z = x - y;
 					}
 				else if ( f == 3)
 					{
 						s = "*"
-						y = myfun (100);
+						y = randomMathNumber (100);
 						z = x * y;
 					}
 				else
 					{
 						$("#mathAnswer2").css("visibility","visible");
 						s = "/"
-						y = myfun (50);
+						y = randomMathNumber (50);
 						r = x % y;
 						z1 = x - r;
 						z = z1 / y;

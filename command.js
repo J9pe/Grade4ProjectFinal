@@ -95,14 +95,7 @@ command.batSpam = function(id,minus,time)
 }
 
 command.moveImageToPlayer = function (id, minus) {
-if (decreaser<0){increaserLeft=0;}
-increaserLeft+=minus*1;
-    var f=10*increaserLeft;
 
-	var e = document.getElementById(id);
-	$("#"+id).css("left",f*minus+"px");
-	if (e.style.left>50){	minus=minus*(-1);}
-	this.repaint(id);
 	}
 	
 command.clearTimer=function()
